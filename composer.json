@@ -1,0 +1,27 @@
+{
+    "name": "pangpondpon/ngcli-indexifier",
+    "description": "Laravel package",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Patompong Savaengsuk ",
+        "email": "p.pangpond@windowslive.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Indexifier\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Indexifier\\Ngcli-indexifierServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
