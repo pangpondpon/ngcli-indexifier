@@ -4,7 +4,12 @@
 namespace Indexifier\Classes;
 
 
-class ScriptsFetcher
-{
+use Indexifier\Contracts\Fetcher;
 
+class ScriptsFetcher implements Fetcher
+{
+    public function fetch(): string
+    {
+        return '';
+    }
 }

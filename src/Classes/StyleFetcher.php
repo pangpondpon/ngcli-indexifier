@@ -4,7 +4,12 @@
 namespace Indexifier\Classes;
 
 
-class StyleFetcher
-{
+use Indexifier\Contracts\Fetcher;
 
+class StyleFetcher implements Fetcher
+{
+    public function fetch(): string
+    {
+        return '';
+    }
 }
