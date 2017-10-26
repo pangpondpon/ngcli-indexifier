@@ -1,6 +1,7 @@
 # pangpondpon/ngcli-indexifier
 
 Package to insert angular assets to laravel blade template.
+[![Build Status](https://travis-ci.org/pangpondpon/ngcli-indexifier.svg?branch=master)](https://travis-ci.org/pangpondpon/ngcli-indexifier)
 
 ## Problem
 Angular Cli build production command will output the hash in js and css file. This library will help you include those files easily using blade directive `ngStyle` and `ngScripts`
