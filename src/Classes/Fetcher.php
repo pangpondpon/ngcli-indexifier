@@ -85,6 +85,7 @@ abstract class Fetcher
         foreach ($nodes as $node) {
             if(in_array($node->getAttribute('type'), $ignoreTypes)) continue;
 
+            $node = $this->appendDistToNodeSrc($node);
             $html .= $this->domElementToHtml($node);
         }
 
@@ -99,5 +100,29 @@ abstract class Fetcher
         $doc->appendChild($doc->importNode($cloned,TRUE));
 
         return $doc->saveHTML();
+    }
+
+    private function appendDistToNodeSrc(\DOMElement $node)
+    {
+        $src = $node->getAttribute('src');
+        $srcType = 'src';
+
+        if(!$src) {
+            $src = $node->getAttribute('href');
+            $srcType = 'href';
+        }
+
+        if(function_exists('config')) {
+            $rootFolder = $this->getAssetsRootFolder();
+
+            $node->setAttribute($srcType, "$rootFolder/{$src}");
+        }
+
+        return $node;
+    }
+
+    private function getAssetsRootFolder()
+    {
+        return config('indexifier.ng_root_folder');
     }
 }
