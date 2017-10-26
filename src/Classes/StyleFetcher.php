@@ -4,12 +4,13 @@
 namespace Indexifier\Classes;
 
 
-use Indexifier\Contracts\Fetcher;
-
-class StyleFetcher implements Fetcher
+class StyleFetcher extends Fetcher
 {
     public function fetch(): string
     {
-        return '';
+        $nodes = $this->dom->getElementsByTagName("link");
+        $ignoreTypes = [ "image/x-icon" ];
+
+        return trim($this->getHtmlTextFromDomList($nodes, $ignoreTypes));
     }
 }

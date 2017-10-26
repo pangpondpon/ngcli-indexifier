@@ -3,13 +3,12 @@
 
 namespace Indexifier\Classes;
 
-
-use Indexifier\Contracts\Fetcher;
-
-class ScriptsFetcher implements Fetcher
+class ScriptsFetcher extends Fetcher
 {
     public function fetch(): string
     {
-        return '';
+        $nodes = $this->dom->getElementsByTagName("script");
+
+        return trim($this->getHtmlTextFromDomList($nodes));
     }
 }
