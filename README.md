@@ -1,6 +1,7 @@
 # pangpondpon/ngcli-indexifier
 
 Package to insert angular assets to laravel blade template.
+
 [![Build Status](https://travis-ci.org/pangpondpon/ngcli-indexifier.svg?branch=master)](https://travis-ci.org/pangpondpon/ngcli-indexifier)
 
 ## Problem
