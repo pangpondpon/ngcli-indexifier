@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Indexifier\\Ngcli-indexifierServiceProvider"
+                "Indexifier\\IndexifierServiceProvider"
             ]
         }
     },
